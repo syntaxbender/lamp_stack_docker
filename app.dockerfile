@@ -7,8 +7,6 @@ RUN mkdir -p /var/www/html
 
 WORKDIR /var/www/html
 
-COPY termo.sql /var/www/html
-
 RUN apt-get update && apt-get upgrade -y
 
 RUN echo "mysql-apt-config mysql-apt-config/select-tools select Enabled" | debconf-set-selections
