@@ -1,0 +1,22 @@
+version: '3.6'
+services:
+  termo-dev:
+    build:
+      context: '.'
+      dockerfile: termo.dockerfile
+    working_dir: '/var/www/html'
+    volumes:
+      - '~/Desktop/saykobender/app/app:/var/www/html'
+      - php-cf:/etc/php
+      - mysql-cf:/etc/mysql
+      - mysql-data:/var/lib/mysql
+      - mysql-log:/var/log/mysql
+    entrypoint: bash
+    tty: true
+    ports:
+      - 1455:80
+volumes:
+  php-cf:
+  mysql-cf:
+  mysql-data:
+  mysql-log:
