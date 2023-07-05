@@ -3,7 +3,7 @@ services:
   termo-dev:
     build:
       context: '.'
-      dockerfile: termo.dockerfile
+      dockerfile: app.dockerfile
     working_dir: '/var/www/html'
     volumes:
       - '~/Desktop/saykobender/app/app:/var/www/html'
